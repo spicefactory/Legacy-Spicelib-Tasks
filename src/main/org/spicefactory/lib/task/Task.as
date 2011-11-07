@@ -126,7 +126,6 @@ public class Task extends EventDispatcher {
 	 * @private
 	 */
 	public function Task () {
-		// TODO - include abstract check
 		if (logger == null) {
 			logger = LogContext.getLogger("org.spicefactory.lib.task.Task");
 		}
@@ -302,7 +301,7 @@ public class Task extends EventDispatcher {
 	 */
 	protected function setTimeout (value : uint) : void {
 		if (value < 0) {
-			logger.error("Timeout cannot be negative"); // TODO - check if check is necessary
+			logger.error("Timeout cannot be negative");
 			return;
 		}
 		_timeout = value;
